@@ -1,0 +1,62 @@
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.dll.config
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.pdb
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Newtonsoft.Json.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Newtonsoft.Json.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csprojResolveAssemblyReference.cache
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.pdb
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.Extensions.ChildKernel.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\WebApiContrib.IoC.Ninject.dll
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.Extensions.ChildKernel.xml
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.Properties.Resources.resources
+C:\Users\DinnamuS Tecnologia\documents\visual studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.GenerateResource.Cache
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Cors.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Cors.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Owin.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\WebActivatorEx.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Owin.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Microsoft.Owin.dll
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Cors.xml
+C:\Users\DinnamuS Tecnologia\Documents\Visual Studio 2013\Projects\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Owin.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.dll.config
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\DinnamuSWebApi.pdb
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Newtonsoft.Json.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.Extensions.ChildKernel.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Cors.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Cors.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Owin.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\WebActivatorEx.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\WebApiContrib.IoC.Ninject.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Owin.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Microsoft.Owin.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Newtonsoft.Json.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\Ninject.Extensions.ChildKernel.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Cors.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Owin.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csprojAssemblyReference.cache
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.Properties.Resources.resources
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.GenerateResource.cache
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.CoreCompileInputs.cache
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.CopyComplete
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.dll
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.pdb
