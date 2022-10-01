@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using DinnamuS_API.Repositories.Utils;
+using System.Configuration;
 
 namespace DinnamuSWebApi.Repositories
 {
@@ -72,7 +73,9 @@ namespace DinnamuSWebApi.Repositories
 
         public ClienteRepository()
         {
-            _conexao = new SqlConnection("Server=MAFIA;DATABASE=Principal;User ID=sa;Password=sa");
+            string _con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            _conexao = new SqlConnection(_con);
+            
         }
 
         public Cliente GetById(long codigo)

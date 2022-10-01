@@ -1,6 +1,8 @@
 ﻿using DinnamuSWebApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -16,7 +18,9 @@ namespace DinnamuSWebApi.Repositories.Produtos
 
         public ProdutoRepository()
         {
-            _connection = new SqlConnection("Server=MAFIA;DATABASE=Principal;User ID=sa;Password=sa");
+            string _con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            _connection = new SqlConnection(_con);
+            
         }
 
         public List<Produto> Get()
