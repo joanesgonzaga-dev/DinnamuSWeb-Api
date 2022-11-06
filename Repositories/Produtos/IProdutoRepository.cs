@@ -10,9 +10,9 @@ namespace DinnamuSWebApi.Repositories.Produtos
     public interface IProdutoRepository
     {
         List<Produto> Get();
-        Produto Get(int chaveunica);
+        Produto Get(long chaveunica);
         void Insert(Produto produto);
         void Update(Produto produto);
-        void Delete(int chaveunica);
+        void Delete(long chaveunica);
     }
 }

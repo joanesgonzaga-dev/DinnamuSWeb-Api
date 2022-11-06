@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http.Filters;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace DinnamuSWebApi.Filters
 {
@@ -16,6 +17,8 @@ namespace DinnamuSWebApi.Filters
         {
          var ex = context.Exception?.InnerException?.InnerException as Exception;
          context.Response = new HttpResponseMessage(HttpStatusCode.InternalServerError);
+
+            Debug.Print(ex.Message);
             //if (!(context.Exception is Exception)) return;   
         }
     }

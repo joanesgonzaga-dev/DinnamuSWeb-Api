@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,103 +11,131 @@ namespace DinnamuS_API.Repositories.Utils
     public class GerarId
     {
         private static IDbConnection _connection;
+        private static SqlCommand cmd;
         private static int codLoja = 0;
         private static int codPdv = 0;
+        static string _con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         static GerarId()
-        {
-            _connection = new SqlConnection("Server=MAFIA;DATABASE=Principal;User ID=sa;Password=sa");
+        {    
+            //_connection = new SqlConnection("Server=MAFIA;DATABASE=Principal;User ID=sa;Password=sa");
         }
 
         /// <summary>
-        /// Recebe o nome da tabela a ter o Id gerado
+        /// Gera um novo Id (long) para a tabela
         /// </summary>
         /// <param name="nomeTabela">Nome da tabela para a qual gerar Sequencial</param>
         /// <param name="usarPDV">Deve usar o campo codigo_pdv_online do cadastro de lojas?</param>
         /// <returns>retorna o sequencial para o Id, do tipo long (Int64)</returns>
-        public static long Gerar(string nomeTabela, bool usarPDV = true)
+        public static long GerarNovoCodigoTabela(string nomeTabela, bool usarPDV = true)
         {
-            try
+            using (_connection = new SqlConnection(_con))
             {
-                SqlCommand cmd = new SqlCommand() ;
-                cmd.CommandText = "NovoCodigoTabela";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@cNomeTabela", nomeTabela);
-
-                SqlParameter param1 = new SqlParameter();
-                param1.ParameterName = "@nValor";
-                param1.SqlDbType = SqlDbType.BigInt;
-                param1.Value = 0;
-
-                param1.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(param1);
-
-                cmd.Connection = (SqlConnection)_connection;
-
                 _connection.Open();
 
-                cmd.ExecuteNonQuery();
-
-                long novaSequencia = (long)param1.Value;
-
-                RetornaCodigoLojaPDV();
-
-                string loja = codLoja.ToString();
-                string pdv  = codPdv.ToString();
-
-
-                string IdConcatenado = string.Empty;
-
-                if(usarPDV)
+                using (cmd = (SqlCommand)_connection.CreateCommand())
                 {
-                    IdConcatenado = loja + "0" + pdv + "0" + novaSequencia.ToString();
-                }
+                    cmd.CommandText = "NovoCodigoTabela";
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                else
-                {
-                    IdConcatenado = loja + "0" + novaSequencia.ToString();
+                    SqlParameter nValor = new SqlParameter();
+                    nValor.ParameterName = "@nValor";
+                    nValor.SqlDbType = SqlDbType.BigInt;
+                    nValor.Value = 0;
+                    nValor.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(nValor);
+
+                    cmd.Parameters.AddWithValue("@cNomeTabela", nomeTabela);
+                    cmd.Connection = (SqlConnection)_connection;
+
+                    cmd.ExecuteNonQuery();
+
+                    long novaSequencia = (long)nValor.Value;
+
+                    RetornaCodigoLojaPDV();
+
+                    string IdConcatenado = string.Empty;
+
+                    if (usarPDV)
+                    {
+                        IdConcatenado = codLoja.ToString() + "0" + codPdv.ToString() + "0" + novaSequencia.ToString();
+                    }
+
+                    else
+                    {
+                        IdConcatenado = codLoja.ToString() + "0" + novaSequencia.ToString();
+                    }
+
+                    return Int64.Parse(IdConcatenado);
                 }
                 
-
-                return Int64.Parse(IdConcatenado);
             }
 
-            finally
-            {
-                _connection.Close();
-            }
+                
         }
 
+        /// <summary>
+        /// Gera um novo código sequencial para os campos da tabela
+        /// </summary>
+        /// <param name="nomeTabela">Tabela a ter o código gerado</param>
+        /// <returns></returns>
+        public static void GerarNovoSequencialTabela(string nomeTabela, DateTime data, out long valor, out long indiceSequenciamento)
+        {
+            using (_connection = new SqlConnection(_con))
+            {
+                using (cmd = (SqlCommand)_connection.CreateCommand())
+                {
+                    cmd.Connection = (SqlConnection)_connection;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "GerarNovoSequencialTabela";
+                    _connection.Open();
+
+                    cmd.Parameters.AddWithValue("cNomeTabela", nomeTabela);
+                    cmd.Parameters.AddWithValue("Data", data);
+
+                    SqlParameter nValor = new SqlParameter();
+                    nValor.ParameterName = "@nValor";
+                    nValor.SqlDbType = SqlDbType.BigInt;
+                    nValor.Value = 0;
+                    nValor.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(nValor);
+
+                    SqlParameter nIndiceSequenciamento = new SqlParameter();
+                    nIndiceSequenciamento.ParameterName = "@nIndiceSequenciamento";
+                    nIndiceSequenciamento.SqlDbType = SqlDbType.BigInt;
+                    nIndiceSequenciamento.Value = 0;
+                    nIndiceSequenciamento.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(nIndiceSequenciamento);
+
+                    cmd.ExecuteNonQuery();
+
+                    valor = (long)nValor.Value;
+                    indiceSequenciamento = (long)nIndiceSequenciamento.Value;
+                }
+            }
+                
+        }
         private static void RetornaCodigoLojaPDV()
         {
-            try
+            using (_connection = new SqlConnection(_con))
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "SELECT codigo, codigo_pdv_online FROM lojas WHERE atual='S' ";
-                cmd.Connection = (SqlConnection)_connection;
-                
-                if(_connection.State == ConnectionState.Closed)
+                _connection.Open();
+
+                using (cmd = (SqlCommand)_connection.CreateCommand())
                 {
-                    _connection.Open();
+                    cmd.CommandText = "SELECT codigo, codigo_pdv_online FROM lojas WHERE atual='S' ";
+                    cmd.Connection = (SqlConnection)_connection;
+
+                    SqlDataReader _reader = cmd.ExecuteReader();
+
+                    _reader.Read();
+                    codLoja = (int)_reader.GetInt32(0);
+                    codPdv = (int)_reader.GetInt32(1);
                 }
-
-                SqlDataReader _reader = cmd.ExecuteReader();
-
-                _reader.Read();
-                codLoja = (int)_reader.GetInt32(0);
-                codPdv = (int)_reader.GetInt32(1);
+                
             }
 
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-
-            finally
-            {
-                _connection.Close();
-            }
+            
         }
     }
 }

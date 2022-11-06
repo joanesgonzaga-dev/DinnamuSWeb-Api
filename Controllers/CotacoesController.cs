@@ -1,4 +1,5 @@
 ﻿using DinnamuSWebApi.Data.Vendas;
+using DinnamuSWebApi.Models;
 using DinnamuSWebApi.Repositories.Vendas;
 using System;
 using System.Collections.Generic;
@@ -50,18 +51,44 @@ namespace DinnamuSWebApi.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Inserir([FromBody]CotacaoDTOInserir cotacao)
+        public HttpResponseMessage Inserir([FromBody]DadosOrc cotacao)
         {
-            try
+            _repository.Inserir(cotacao);
+                //cotacao = _repository.cotacoes(produto.Codigo);
+            HttpResponseMessage resp = Request.CreateResponse(HttpStatusCode.Created);
+            return resp;            
+        }
+
+        [HttpPost]
+        [Route("{inseriritem}")]
+        public HttpResponseMessage InserirItemNaCotacao([FromBody]DadosOrc_InserirItemDTO cotacao)
+        {
+            if (!ModelState.IsValid)
             {
-                return Json("ok");
+                #region HttpResponseException
+                //Not a really true exception, but a way to send a specific HttpResponse
+                throw new HttpResponseException(
+                    new HttpResponseMessage
+                    {
+                        StatusCode = HttpStatusCode.BadRequest,
+                        Content = new StringContent("Não foi possível criar. Parâmetros ausêntes")
+                    }
+                );
+                #endregion
             }
 
-            catch(Exception ex)
+            //Objeto DadosOrc para necessidades futuras
+            DadosOrc _cotacao = new DadosOrc()
             {
-                return BadRequest(ex.Message);
-            }
-            
+                Codigo = cotacao.Codigo,
+            };
+
+            _cotacao.itens = new List<ItemOrc>();
+            _cotacao.itens.Add(cotacao.itens[0]);
+
+            _repository.InserirItemNaCotacao(_cotacao.itens[0]);
+
+            return null;
         }
     }
 }

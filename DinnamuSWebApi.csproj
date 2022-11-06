@@ -131,6 +131,7 @@
     <Compile Include="Data\Vendas\CotacaoDTOConsulta.cs" />
     <Compile Include="Data\Vendas\DadosOrc_ConsultaCotacaoDTO.cs" />
     <Compile Include="Data\Vendas\DadosOrc_InserirCotacaoDTO.cs" />
+    <Compile Include="Data\Vendas\DadosOrc_InserirItemDTO.cs" />
     <Compile Include="Data\Vendas\VendedorParaConsultaCotacaoDTO.cs" />
     <Compile Include="Data\Vendas\VendedorParaInserirCotacaoDTO.cs" />
     <Compile Include="Filters\GeneralExceptionFilterAttribute.cs" />
@@ -142,11 +143,14 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Data\Vendas\CotacaoDTOInserir.cs" />
     <Compile Include="Models\DadosOrc.cs" />
+    <Compile Include="Models\EstoqueFilial.cs" />
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\ItemOrc.cs" />
+    <Compile Include="Models\ItemTabelaDePreco.cs" />
     <Compile Include="Models\ItensGradeProduto.cs" />
     <Compile Include="Models\ItensTabelaGrade.cs" />
     <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\TabelaDePreco.cs" />
     <Compile Include="Models\Vendedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -159,11 +163,11 @@
     <Compile Include="Repositories\Grades\GradeRepository.cs" />
     <Compile Include="Repositories\Grades\IGradeRepository.cs" />
     <Compile Include="Repositories\Produtos\IProdutoRepository.cs" />
-    <Compile Include="Repositories\Produtos\ProdutoRepository_modelo.cs" />
     <Compile Include="Repositories\Produtos\ProdutoRepository.cs" />
     <Compile Include="Repositories\Vendas\CotacaoRepository.cs" />
     <Compile Include="Repositories\Vendas\ICotacaoRepository.cs" />
     <Compile Include="Utils\GerarId.cs" />
+    <Compile Include="Utils\ValidParameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

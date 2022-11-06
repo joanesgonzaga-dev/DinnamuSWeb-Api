@@ -157,7 +157,8 @@ namespace DinnamuSWebApi.Controllers
 
         // DELETE: api/clientes/5
         [HttpDelete]
-        public HttpResponseMessage Excluir(int IdUnico)
+        [Route("{IdUnico}")]
+        public HttpResponseMessage Excluir([FromUri]int IdUnico)
         {
             _repository.Delete(IdUnico);
             HttpResponseMessage resp = Request.CreateResponse(HttpStatusCode.OK);

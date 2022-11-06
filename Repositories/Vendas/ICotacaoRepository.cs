@@ -16,5 +16,7 @@ namespace DinnamuSWebApi.Repositories.Vendas
 
         void Inserir(DadosOrc cotacao);
 
+        void InserirItemNaCotacao(ItemOrc item);
+
     }
 }

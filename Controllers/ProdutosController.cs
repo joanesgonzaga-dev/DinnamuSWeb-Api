@@ -1,13 +1,16 @@
-﻿using DinnamuSWebApi.Repositories.Produtos;
+﻿using DinnamuSWebApi.Models;
+using DinnamuSWebApi.Repositories.Produtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
 namespace DinnamuSWebApi.Controllers
 {
+    [RoutePrefix("api/produtos")]
     public class ProdutosController : ApiController
     {
         private IProdutoRepository _repository;
@@ -18,19 +21,43 @@ namespace DinnamuSWebApi.Controllers
         }
 
         [HttpGet]
-        [Route("api/produtos")]
         public IHttpActionResult Produtos()
         {
-            try
-            {
-                return Json(_repository.Get());
-            }
+            return Json(_repository.Get());
+        }
 
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message, ex);
-            }
-            
+        [HttpGet]
+        [Route("{codigo:int}")]
+        public IHttpActionResult Produtos([FromUri] int codigo)
+        {
+            return Json(_repository.Get(codigo));
+        }
+
+        [HttpPost]
+        public HttpResponseMessage Insert([FromBody] Produto produto)
+        {
+            _repository.Insert(produto);
+            produto = _repository.Get(produto.Codigo);
+            HttpResponseMessage resp = Request.CreateResponse(HttpStatusCode.Created, produto);
+            return resp;
+        }
+
+        [HttpPut]
+        public HttpResponseMessage Update([FromBody]Produto produto)
+        {
+            _repository.Update(produto);
+            produto = _repository.Get(produto.Codigo);
+            HttpResponseMessage resp = Request.CreateResponse(HttpStatusCode.Created, produto);
+            return resp;
+        }
+
+        [HttpDelete]
+        [Route("{codigo}")]
+        public HttpResponseMessage Delete([FromUri]long codigo)
+        {
+            _repository.Delete(codigo);
+            HttpResponseMessage resp = Request.CreateResponse(HttpStatusCode.NoContent);
+            return resp;
         }
     }
 }

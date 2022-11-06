@@ -53,10 +53,10 @@ C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Cors.xml
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.Owin.xml
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\bin\System.Web.Http.WebHost.xml
-C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csprojAssemblyReference.cache
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.Properties.Resources.resources
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.GenerateResource.cache
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.CoreCompileInputs.cache
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.CopyComplete
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.dll
 C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.pdb
+C:\Users\DinnamuS Tecnologia\source\repos\DinnamuSWebApi-Sln\DinnamuSWebApi\obj\Debug\DinnamuSWebApi.csproj.AssemblyReference.cache
